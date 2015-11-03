@@ -1,6 +1,9 @@
 #ifndef __MERCURY_REGISTRAR_REGISTRAR_H__
 #define __MERCURY_REGISTRAR_REGISTRAR_H__
 
+#include "mercury/config.h"
+#include "mercury/log/log.h"
+
 #include <string>
 
 namespace mercury { namespace registrar {
@@ -13,7 +16,8 @@ public:
     int start();
 
 private:
-    const std::string& path_;
+    const std::string&     path_;
+    log::log_t             log_;
 };
 
 }}
