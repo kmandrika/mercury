@@ -29,10 +29,10 @@ inline std::string format(const std::string& fmt, Args&&... args)
     return detail::format_impl(f, std::forward<Args>(args)...).str();
 }
 
-#define INFO(fmt, ...) _I(mercury::log::detail::format(fmt, ## __VA_ARGS__))
-#define WARN(fmt, ...) _W(mercury::log::detail::format(fmt, ## __VA_ARGS__))
-#define ERROR(fmt, ...) _E(mercury::log::detail::format(fmt, ## __VA_ARGS__))
-#define PANIC(fmt, ...) _P(mercury::log::detail::format(fmt, ## __VA_ARGS__))
+#define __I(fmt, ...) _I(mercury::log::detail::format(fmt, ## __VA_ARGS__))
+#define __W(fmt, ...) _W(mercury::log::detail::format(fmt, ## __VA_ARGS__))
+#define __E(fmt, ...) _E(mercury::log::detail::format(fmt, ## __VA_ARGS__))
+#define __PANIC(fmt, ...) _P(mercury::log::detail::format(fmt, ## __VA_ARGS__))
 
 }}} // namespace detail/log/mercury
 
